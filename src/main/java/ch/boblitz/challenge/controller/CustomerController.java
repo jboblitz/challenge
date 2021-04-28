@@ -12,12 +12,12 @@ public class CustomerController {
     @Autowired
     private CustomerService service;
 
-    @GetMapping(value = "/{id}", produces = "application/json")
+    @GetMapping(value = "/{id}")
     public CustomerEntity getCustomer(@PathVariable int id) {
         return service.get(id);
     }
 
-    @PostMapping(consumes = "application/json", produces = "application/json")
+    @PostMapping
     public CustomerEntity newEmployee(@RequestBody CustomerEntity customer) {
         return service.save(customer);
     }
