@@ -77,7 +77,8 @@ class SpringBootBasicCodingChallengeApplicationTests {
                 .andDo(print())
                 .andExpect(status().isOk());
 
-        repository.findAll().forEach(System.out::println);
+//        for debugging:
+//        repository.findAll().forEach(System.out::println);
     }
 
 }

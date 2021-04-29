@@ -34,11 +34,13 @@ public class CustomerEntity extends BaseEntity {
     @JsonManagedReference
     private Set<AddressEntity> addressEntities = new HashSet<>();
 
+
     public void addAddress(AddressEntity address) {
         addressEntities.add(address);
         address.setCustomerId(this);
     }
 
+    // TODO: dead code?
     public void removeAddress(AddressEntity address) {
         addressEntities.remove(address);
         address.setCustomerId(null);
@@ -56,4 +58,5 @@ public class CustomerEntity extends BaseEntity {
         addressEntities.forEach(sb::append);
         return sb.toString();
     }
+
 }
