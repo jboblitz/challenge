@@ -30,6 +30,7 @@ public class AddressEntity extends BaseEntity {
     @Column(nullable = false)
     private String city;
 
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -42,7 +43,6 @@ public class AddressEntity extends BaseEntity {
                 .append(" City : ")
                 .append(city);
         return sb.toString();
-
-
     }
+
 }

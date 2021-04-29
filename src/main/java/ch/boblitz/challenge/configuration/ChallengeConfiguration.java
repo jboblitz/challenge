@@ -10,6 +10,7 @@ import org.springframework.context.event.EventListener;
 
 import java.time.LocalDate;
 
+
 @Configuration
 public class ChallengeConfiguration {
 
