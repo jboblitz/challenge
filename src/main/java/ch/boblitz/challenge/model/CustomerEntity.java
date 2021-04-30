@@ -37,13 +37,15 @@ public class CustomerEntity extends BaseEntity {
 
     public void addAddress(AddressEntity address) {
         addressEntities.add(address);
-        address.setCustomerId(this);
+//        TODO: needs to be reviewed:
+//        address.setCustomerId(this);
     }
 
     // TODO: dead code?
     public void removeAddress(AddressEntity address) {
         addressEntities.remove(address);
-        address.setCustomerId(null);
+//        TODO: needs to be reviewed:
+//        address.setCustomerId(null);
     }
 
     @Override

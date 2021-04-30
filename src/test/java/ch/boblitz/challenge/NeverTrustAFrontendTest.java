@@ -5,7 +5,6 @@ import ch.boblitz.challenge.model.CustomerEntity;
 import ch.boblitz.challenge.service.CustomerService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -79,7 +78,7 @@ public class NeverTrustAFrontendTest {
         customer1.setLastName("lastname1");
         customer1.setBirthDate(LocalDate.of(1980, 8, 7));
 
-        AddressEntity address1 = new AddressEntity();
+        AddressEntity address1 = new AddressEntity(customer1);
         address1.setCity("city1");
         address1.setCountry("Switzerland");
         address1.setStreet("street1");
@@ -93,7 +92,7 @@ public class NeverTrustAFrontendTest {
         customer2.setLastName("lastname2");
         customer2.setBirthDate(LocalDate.of(1980, 8, 7));
 
-        AddressEntity address2 = new AddressEntity();
+        AddressEntity address2 = new AddressEntity(customer2);
         address2.setCity("city1");
         address2.setCountry("Switzerland");
         address2.setStreet("street1");

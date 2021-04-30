@@ -56,7 +56,7 @@ class SpringBootBasicCodingChallengeApplicationTests {
         e.setLastName("Kohl");
         e.setBirthDate(LocalDate.of(2000, 2, 21));
 
-        AddressEntity a = new AddressEntity();
+        AddressEntity a = new AddressEntity(e);
         a.setPostalCode("64625");
         a.setStreet("Bismarkstrasse 11");
         a.setCountry("Germany");
