@@ -25,7 +25,7 @@ public class ChallengeConfiguration {
         e.setLastName("Boblitz");
         e.setBirthDate(LocalDate.of(1963, 8, 7));
 
-        AddressEntity a = new AddressEntity();
+        AddressEntity a = new AddressEntity(e);
         a.setCity("Gränichen");
         a.setCountry("Switzerland");
         a.setStreet("Oberfeldstrasse 26");
